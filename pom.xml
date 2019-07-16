@@ -65,18 +65,11 @@
 
 
     <modules>
-        <module>keel-eureka</module>
-        <module>keel-turbine</module>
-        <module>keel-common</module>
+<!--        <module>keel-eureka</module>-->
+<!--        <module>keel-turbine</module>-->
+<!--        <module>keel-common</module>-->
         <!--        <module>keel-auth</module>-->
-        <!--        <module>keel-gateway</module>-->
-        <!--        <module>keel-mps</module>-->
-        <!--        <module>keel-passport-common</module>-->
-        <!--        <module>keel-passport</module>-->
-        <!--        <module>keel-portal</module>-->
-        <!--        <module>keel-portal-common</module>-->
-        <!--        <module>keel-portal-data</module>-->
-        <!--        <module>keel-modules</module>-->
+        <module>keel-gateway</module>
         <module>keel-demo</module>
     </modules>
 
@@ -117,6 +110,7 @@
                         <artifactId>asm</artifactId>
                         <version>6.2</version> <!-- Use newer version of ASM -->
                     </dependency>
+
                 </dependencies>
             </plugin>
             <plugin>
@@ -140,6 +134,14 @@
                     <useProjectReferences>true</useProjectReferences>
                     <downloadSources>true</downloadSources>
                     <!--<pde>false</pde>-->
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.4.2</version>
+                <configuration>
+                    <skipTests>true</skipTests>
                 </configuration>
             </plugin>
         </plugins>
